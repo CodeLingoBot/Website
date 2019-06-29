@@ -152,7 +152,10 @@ class ThemeOptions {
 				?>
 				<select id="EF_themeselect_logo" name="Graphic_logo">
 					<option value="" style="background-color:LightGray"><?php echo gettext('*no logo selected'); ?></option>';
-					<option value="*"<?php if ($currentValue == '*') echo ' selected="selected"'; ?>><?php echo gettext('Effervescence'); ?></option>';
+					<option value="*"<?php if ($currentValue == '*') {
+	echo ' selected="selected"';
+}
+?>><?php echo gettext('Effervescence'); ?></option>';
 					<?php generateListFromFiles($currentValue, SERVERPATH . '/' . UPLOAD_FOLDER . '/images', '.png'); ?>
 				</select>
 				<?php

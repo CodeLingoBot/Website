@@ -1,8 +1,9 @@
 <?php
 // force UTF-8 Ø
 
-if (!defined('WEBPATH'))
+if (!defined('WEBPATH')) {
 	die();
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,15 +83,17 @@ if (!defined('WEBPATH'))
 						printSlideShowLink();
 						echo '</span>';
 					}
-					if (function_exists('printAddToFavorites'))
-						printAddToFavorites($_zp_current_image);
+					if (function_exists('printAddToFavorites')) {
+											printAddToFavorites($_zp_current_image);
+					}
 					if (function_exists('printRating')) {
 						echo '<div id="rating">';
 						printRating();
 						echo '</div>';
 					}
-					if (function_exists('printGoogleMap'))
-						printGoogleMap();
+					if (function_exists('printGoogleMap')) {
+											printGoogleMap();
+					}
 					if (function_exists('printCommentForm')) {
 						echo '<hr />';
 						printCommentForm();

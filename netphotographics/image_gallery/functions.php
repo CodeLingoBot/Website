@@ -145,7 +145,8 @@ class imagegallery {
 						}
 						?>
 
-						<div id="caption"<?php if (getOption('netPhotoGraphics_caption_location') == 'none') echo ' style="display:none"' ?>>
+						<div id="caption"<?php if (getOption('netPhotoGraphics_caption_location') == 'none') {
+	echo ' style="display:none"' ?>>
 						</div>
 						<div class="clearage"></div>
 						<?php
@@ -153,6 +154,7 @@ class imagegallery {
 
 							function map_callback($map) {
 								global $points;
+}
 								foreach ($points as $coord) {
 									addGeoCoord($map, $coord);
 								}
@@ -165,7 +167,10 @@ class imagegallery {
 						}
 						?>
 					</div><!-- images -->
-					<?php if (function_exists('printAddToFavorites')) printAddToFavorites($_zp_current_album); ?>
+					<?php if (function_exists('printAddToFavorites')) {
+	printAddToFavorites($_zp_current_album);
+}
+?>
 					<?php @call_user_func('printRating'); ?>
 				</div><!-- main -->
 				<div class="clearage"></div>
